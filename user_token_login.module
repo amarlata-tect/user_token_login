@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\user\UserInterface;
+/**
+ * @file
+ * Allows users to generate and insert a token.
+ */
+
+/**
+ * Implements hook_entity_insert().
+ */
+
+//function user_token_login_user_insert(UserInterface $account) {
+//  $token = \Drupal::service('user_token_login.auth_login_default')->generateRandomToken();
+//  $account->set('field_auth_token', $token);
+//}
+
+/**
+ * Implements hook_entity_presave().
+ */
+
+function user_token_login_user_presave(UserInterface $account) {
+  $token = \Drupal::service('user_token_login.auth_login_default')->generateRandomToken();
+  $account->set('field_auth_token', $token);
+}

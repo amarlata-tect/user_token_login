@@ -1,0 +1,10 @@
+services:
+  user_token_login.auth_login_default:
+    class: Drupal\user_token_login\Service\AuthLoginDefault
+    arguments: ['@config.factory', '@entity_type.manager', '@logger.factory']
+
+  user_token_login.anonymous_user_session_subscriber:
+    class: Drupal\user_token_login\EventSubscriber\AnonymousUserSessionSubscriber
+    arguments: ['@current_user', '@config.factory', '@messenger', '@user_token_login.auth_login_default']
+    tags:
+      - { name: event_subscriber }

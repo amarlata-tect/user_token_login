@@ -1,0 +1,7 @@
+user_token_login.settings_form:
+  path: '/admin/config/user-auth-login/settings'
+  defaults:
+    _form: 'Drupal\user_token_login\Form\AuthTokenSettingsForm'
+    _title: 'Token generate settings'
+  requirements:
+    _permission: 'Token generate site settings form'

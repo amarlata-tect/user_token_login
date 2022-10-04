@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the User Token Login module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function user_token_login_install() {
+  $authLoginDefault = Drupal::service('user_token_login.auth_login_default');
+  // Generate token for all existing users.
+  $authLoginDefault->userTokenGenerate();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function user_token_login_uninstall() {
+ $authLoginDefault = Drupal::service('user_token_login.auth_login_default');
+ $authLoginDefault->deleteFieldConfig();
+}

@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: k29UlwUdoJ0OV1-nwuhLZQFJwCwCcyZopJdJAUYGBPg
+token_length: 32
+dependencies:
+  module:
+    - user_token_login
+  enforecd:
+    module:
+      - user_token_login

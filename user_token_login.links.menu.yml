@@ -1,0 +1,5 @@
+user_token_login.settings_form:
+  title: 'Token generate settings'
+  parent: user.admin_index
+  weight: 10
+  route_name: user_token_login.settings_form

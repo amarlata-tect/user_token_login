@@ -1,0 +1,7 @@
+user_token_login.settings:
+  type: config_object
+  label: 'user Auth Login settings'
+  mapping:
+    token_length:
+      type: integer
+      label: 'How the token length generate'
