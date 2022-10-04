@@ -1,7 +1,7 @@
 name: User Token Login
 type: module
 description: 'Authenticate a user by token.'
-core_version_requirement: ^9.3
+core_version_requirement: ^9
 package: Custom
 
 configure: user_token_login.settings_form
